@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Campanha 1 Milhão de Cliques</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "SUA_API_KEY",
+      authDomain: "SEU_DOMINIO.firebaseapp.com",
+      projectId: "SEU_PROJECT_ID",
+      storageBucket: "SEU_BUCKET.appspot.com",
+      messagingSenderId: "SEU_MESSAGING_ID",
+      appId: "SEU_APP_ID",
+      databaseURL: "https://SEU_PROJECT_ID.firebaseio.com"
+    };
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+  </script>
+</head>
+<body class="dark">
+  <button id="toggleTheme">Modo Claro</button>
+  <div id="contadorCliques">Cliques: 0</div>
+  <div id="progressContainer">
+    <div id="progressBar"></div>
+    <span id="progressText">0 / 1.000.000 cliques</span>
+  </div>
+  <canvas id="canvas"></canvas>
+  <audio id="fireworksSound" src="https://cdn.pixabay.com/download/audio/2022/03/02/audio_c9a76f39ff.mp3?filename=fireworks-explosion-2-168486.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
